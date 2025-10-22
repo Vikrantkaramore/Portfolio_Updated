@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; margin: 10px 0; cursor: pointer; border-radius: 5px; }
+        button:hover { background: #0056b3; }
+        pre { background: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        .success { color: #28a745; }
+        .error { color: #dc3545; }
+    </style>
+</head>
+<body>
+    <h1>🔧 Portfolio API Test</h1>
+    
+    <div>
+        <h2>Health Check</h2>
+        <button onclick="testHealth()">Test Health Endpoint</button>
+        <pre id="healthResult">Click button to test...</pre>
+    </div>
+    
+    <div>
+        <h2>Contact Form</h2>
+        <button onclick="testContact()">Test Contact Endpoint</button>
+        <pre id="contactResult">Click button to test...</pre>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:3001';
+        
+        async function testHealth() {
+            const resultEl = document.getElementById('healthResult');
+            resultEl.innerHTML = '⏳ Testing health endpoint...';
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/health`);
+                const data = await response.json();
+                
+                resultEl.innerHTML = `<span class="success">✅ SUCCESS</span>\n` +
+                    `Status: ${response.status}\n` +
+                    `Response: ${JSON.stringify(data, null, 2)}`;
+            } catch (error) {
+                resultEl.innerHTML = `<span class="error">❌ ERROR</span>\n` +
+                    `Error: ${error.message}`;
+            }
+        }
+        
+        async function testContact() {
+            const resultEl = document.getElementById('contactResult');
+            resultEl.innerHTML = '⏳ Testing contact endpoint...';
+            
+            const testData = {
+                name: 'Test User',
+                email: 'test@example.com',
+                subject: 'API Test',
+                message: 'This is a test message from the API test page.'
+            };
+            
+            try {
+                const response = await fetch(`${API_BASE}/api/contact`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(testData)
+                });
+                
+                const data = await response.json();
+                
+                resultEl.innerHTML = `<span class="success">✅ SUCCESS</span>\n` +
+                    `Status: ${response.status}\n` +
+                    `Response: ${JSON.stringify(data, null, 2)}`;
+                    
+                if (data.previewUrl) {
+                    resultEl.innerHTML += `\n\n🔗 <a href="${data.previewUrl}" target="_blank">View Email Preview</a>`;
+                }
+            } catch (error) {
+                resultEl.innerHTML = `<span class="error">❌ ERROR</span>\n` +
+                    `Error: ${error.message}`;
+            }
+        }
+    </script>
+</body>
+</html>
