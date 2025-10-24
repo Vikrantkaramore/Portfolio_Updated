@@ -15,7 +15,7 @@ const Projects = () => {
         "Filter tasks by status",
         "Responsive design for all devices"
       ],
-      demoUrl: "https://vikrantkaramore.github.io/todo-list-app",
+      demoUrl: "https://todoapp-vikrantkaramore-vikrant-karamores-projects.vercel.app",
       codeUrl: "https://github.com/vikrantkaramore/todo-list-app",
       status: "Completed"
     },
