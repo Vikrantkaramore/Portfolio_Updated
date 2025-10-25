@@ -52,7 +52,7 @@ const Skills = () => {
     "Full Stack Web Development by DevTown",
     "Python Programming by CodeMate",
     "Building a computer vision app with Azure Cognitive Services by Microsoft",
-    "Data Analytics by Deloitte Australia",
+    "Data Analytics Job Simulation by Deloitte",
     "Inter College Hackathon Participation Certificate",
   ];
 
