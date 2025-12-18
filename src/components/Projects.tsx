@@ -15,23 +15,23 @@ const Projects = () => {
         "Filter tasks by status",
         "Responsive design for all devices"
       ],
-      demoUrl: "https://todoapp-vikrantkaramore-vikrant-karamores-projects.vercel.app",
-      codeUrl: "https://github.com/vikrantkaramore/todo-list-app",
+      demoUrl: "https://todoapp-using-flask.vercel.app/",
+      codeUrl: "https://github.com/vikrantkaramore/todo-list-ap",
       status: "Completed"
     },
     {
       title: "E-commerce Platform",
       description: "A modern Teilor delivery platform like replicating blinkit.com core features. Built with responsive design principles and modern web technologies.",
-      technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js", "Sql"],
+      technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js", "MongoDB Atlast"],
       features: [
         "User authentication and profile management",
         "Product browsing and search functionality",
         "Shopping cart and checkout process",
         "Order history and tracking"
       ],
-      demoUrl: "https://vikrantkaramore.github.io/zomato-clone",
-      codeUrl: "https://github.com/vikrantkaramore/zomato-clone",
-      status: "Under construction"
+      demoUrl: "https://vikrantkaramore.github",
+      codeUrl: "https://github.com/Vikrantkaramore/threadify",
+      status: "Devlopment in progress"
     },
     {
       title: "Mechine Learning Project",
@@ -43,7 +43,7 @@ const Projects = () => {
         "Model training and evaluation",
         "Visualization of results"
       ],
-      status: "In Development"
+      status: "Learning Phase"
     }
   ];
 
