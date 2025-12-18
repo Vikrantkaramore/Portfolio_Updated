@@ -1,4 +1,18 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// Get API base URL - compute dynamically based on environment
+const getApiBaseUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL;
+  }
+  
+  // Check if running on localhost
+  if (typeof window !== 'undefined') {
+    const isLocalhost = window.location.hostname === 'localhost' || 
+                       window.location.hostname === '127.0.0.1';
+    return isLocalhost ? 'http://localhost:3001' : '';
+  }
+  
+  return '';
+};
 
 export interface ContactFormData {
   name: string;
@@ -17,7 +31,9 @@ export interface EmailResponse {
 export const emailService = {
   async sendContactEmail(data: ContactFormData): Promise<EmailResponse> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/contact`, {
+      const apiUrl = getApiBaseUrl();
+      console.log('Sending email to:', `${apiUrl}/api/contact`);
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -50,7 +66,8 @@ export const emailService = {
 
   async checkHealth(): Promise<boolean> {
     try {
-      const response = await fetch(`${API_BASE_URL}/api/health`);
+      const apiUrl = getApiBaseUrl();
+      const response = await fetch(`${apiUrl}/api/health`);
       return response.ok;
     } catch (error) {
       console.error('Health check failed:', error);
