@@ -58,11 +58,12 @@ const Contact = () => {
         subject: "",
         message: ""
       });
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error sending message:", error);
+      const message = error instanceof Error ? error.message : "Failed to send message. Please try again.";
       toast({
         title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
+        description: message,
         variant: "destructive",
       });
     } finally {

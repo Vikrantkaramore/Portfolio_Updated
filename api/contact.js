@@ -26,8 +26,7 @@ const createTransporter = () => {
 };
 
 module.exports = async (req, res) => {
-  // Enable CORS
-  res.setHeader('Access-Control-Allow-Credentials', true);
+  // Enable CORS (this function is typically called cross-origin from a deployed frontend)
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
@@ -42,7 +41,20 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const { name, email, subject, message } = req.body;
+    if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+      return res.status(500).json({
+        error: 'Server email is not configured',
+        details: 'Missing EMAIL_USER and/or EMAIL_PASS environment variables',
+      });
+    }
+
+    // Some serverless runtimes provide req.body as a string.
+    const body =
+      typeof req.body === 'string'
+        ? JSON.parse(req.body || '{}')
+        : (req.body || {});
+
+    const { name, email, subject, message } = body;
 
     // Validate required fields
     if (!name || !email || !subject || !message) {

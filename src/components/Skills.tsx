@@ -9,28 +9,28 @@ const Skills = () => {
       title: "Programming Languages",
       color: "text-accent-blue",
       bgColor: "bg-accent-blue/10",
-      skills: ["JavaScript", "Python", "Java", "C++", "HTML5", "CSS3"]
+      skills: ["JavaScript", "Python","C++", "HTML5", "CSS3"]
     },
     {
       icon: Globe,
       title: "Frontend Technologies",
       color: "text-secondary",
       bgColor: "bg-secondary/10",
-      skills: ["React","Tailwind CSS", "Bootstrap"]
+      skills: ["React","Tailwind CSS", "Bootstrap", "React Bits"]
     },
     {
       icon: Database,
       title: "Backend & Database",
       color: "text-accent-cyan",
       bgColor: "bg-accent-cyan/10",
-      skills: ["PostgreSQL", "MySQL"]
+      skills: ["PostgreSQL", "MySQL", "NodeMailer", "Flask", "SQLAlchemy"]
     },
     {
       icon: Settings,
       title: "Development Tools",
       color: "text-accent-purple",
       bgColor: "bg-accent-purple/10",
-      skills: ["Git", "GitHub", "VS Code"]
+      skills: ["Git", "GitHub", "VS Code" ]
     },
     {
       icon: Palette,
