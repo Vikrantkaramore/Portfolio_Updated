@@ -31,10 +31,10 @@ This website showcases my skills, projects, experience, and achievements in web 
 🧑‍💻 Author
 
 👤 Vikrant Karamore
-💼 Web Developer | Machine learning Enthusiast
+💼 Web Developer | learning DevOps 
 📧 vikrantkaramore@gmail.com
 🌐 LinkedIn
 🐙 GitHub
 
 📝 License
-This project is open source and available under the MIT License.
+This project is open source and available.
