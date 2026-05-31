@@ -4,7 +4,7 @@ Welcome to my personal Portfolio Website repository!
 This website showcases my skills, projects, experience, and achievements in web development, ML, and related fields.
 
 🚀 Live Demo
-👉 **URL**: https://portfolio-vikrant-ow9jr6gqk-vikrant-karamores-projects.vercel.app/
+👉 *URL*: https://vikrantkaramore-portfolio.vercel.app/
 (Deployed on Vercel)
 
 🧩 Features
