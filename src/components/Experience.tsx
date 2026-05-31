@@ -9,7 +9,7 @@ const Experience = () => {
       company: "DevTown India",
       location: "Remote",
       period: "May 2023 - October 2023",
-      type: "Internship",
+      type: "Course",
       description: "Gained hands-on experience in web development, working on real-world projects and learning industry best practices.",
       achievements: [
         "Led end-to-end website design and development process, supervising the performance and UX across platforms",

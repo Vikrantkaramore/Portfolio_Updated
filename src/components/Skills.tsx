@@ -9,7 +9,7 @@ const Skills = () => {
       title: "Programming Languages",
       color: "text-accent-blue",
       bgColor: "bg-accent-blue/10",
-      skills: ["JavaScript", "Python", "Java", "C++", "HTML5", "CSS3"]
+      skills: ["JavaScript", "Python","C", "HTML5", "CSS3"]
     },
     {
       icon: Globe,
@@ -52,7 +52,7 @@ const Skills = () => {
     "Full Stack Web Development by DevTown",
     "Python Programming by CodeMate",
     "Building a computer vision app with Azure Cognitive Services by Microsoft",
-    "Data Analytics by Deloitte Australia",
+    "Data Analytics Job Simulation by Deloitte",
     "Inter College Hackathon Participation Certificate",
   ];
 
