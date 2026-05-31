@@ -25,7 +25,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 text-gray-200 font-light">
-          Web Developer & ML Engineer
+          Web Developer Now Learning DevOps
           </p>
           
           <p className="text-lg mb-12 text-gray-300 max-w-2xl mx-auto leading-relaxed">
