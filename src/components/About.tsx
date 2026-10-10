@@ -1,67 +1,57 @@
 import { Card } from "@/components/ui/card";
-import { Code, Lightbulb, Rocket, Users } from "lucide-react";
+import { Cloud, Code, Server, Rocket } from "lucide-react";
 
 const About = () => {
   const highlights = [
     {
-      icon: Code,
-      title: "Frontend Development",
-      description: "Experienced in both frontend and backend technologies"
+      icon: Cloud,
+      title: "Cloud & DevOps",
+      description: "Hands-on with AWS EC2, Docker, Jenkins, Linux, Git/GitHub, and CI/CD pipelines"
     },
     {
-      icon: Lightbulb,
-      title: "Problem Solver",
-      description: "Passionate about finding creative solutions to complex challenges"
+      icon: Server,
+      title: "Application Development",
+      description: "Building scalable solutions with React, Node.js, MySQL, and REST APIs"
+    },
+    {
+      icon: Code,
+      title: "Automation",
+      description: "Passionate about streamlining deployment, infrastructure, and software delivery"
     },
     {
       icon: Rocket,
-      title: "Innovation",
-      description: "Always exploring new technologies and best practices"
-    },
-    {
-      icon: Users,
-      title: "Collaboration",
-      description: "Strong team player with excellent communication skills"
+      title: "Growth",
+      description: "Continuously learning cloud infrastructure, monitoring, and deployment best practices"
     }
   ];
 
   return (
     <section id="about" className="py-20 bg-gradient-subtle">
       <div className="container px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-primary">
             About Me
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h3 className="text-2xl font-bold text-primary mb-6">
-                Passionate Developer & Engineering Student
-              </h3>
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>
-                  I'm Vikrant Karamore, a dedicated Electronics & Communication Engineering 
-                  student at Priyadarshini College of Engineering, Nagpur. With a strong 
-                  foundation in both hardware and software, I bring a unique perspective 
-                  to web development.
-                </p>
-                <p>
-                  My journey in programming began with curiosity and has evolved into a 
-                  passion for creating meaningful digital experiences. I specialize in 
-                  full-stack web development and am constantly learning new technologies 
-                  to stay at the forefront of innovation.
-                </p>
-                <p>
-                  When I'm not coding, you'll find me exploring new frameworks, 
-                  contributing to open-source projects, or working on personal 
-                  projects that challenge my skills and creativity.
-                </p>
-              </div>
+            <div className="space-y-5 text-muted-foreground leading-relaxed text-lg">
+              <p>
+                I&apos;m Vikrant Karamore, a B.Tech graduate in Electronics and Communication Engineering with a strong interest in <strong className="text-primary">DevOps, Cloud Computing, Linux, and Software Development</strong>.
+              </p>
+              <p>
+                I enjoy building applications and deploying them using modern development and cloud technologies. My hands-on experience includes <strong className="text-primary">AWS EC2, Docker, Jenkins, Git/GitHub, Linux, CI/CD, React, Node.js, MySQL, and REST APIs</strong>.
+              </p>
+              <p>
+                I&apos;m continuously improving my skills in cloud infrastructure, automation, containerization, deployment, and monitoring while working on practical projects that solve real-world problems.
+              </p>
+              <p>
+                I&apos;m currently looking for opportunities where I can contribute to a technology-driven team, learn from experienced professionals, and grow as a <strong className="text-primary">DevOps / Cloud / Software Engineer</strong>.
+              </p>
             </div>
-            
+
             <div className="space-y-6">
               {highlights.map((item, index) => (
-                <Card 
+                <Card
                   key={index}
                   className="p-6 bg-gradient-card shadow-md hover:shadow-lg transition-all duration-300 border-l-4 border-l-secondary"
                 >
